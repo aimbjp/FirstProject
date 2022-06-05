@@ -1,0 +1,83 @@
+main .menu{
+    width: 20%;
+}
+main{
+    margin-bottom: 0;
+
+}
+.groupmates{
+    display: grid;
+    margin: auto;
+    margin-top: 0;
+    align-items: center;
+    justify-items: center;
+}
+
+h1{
+    align-self: center;
+    margin-bottom: 3vh;
+    color: #464343;
+}
+
+#search input{
+    width: 80vh;
+    height: 4vh;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    transition: all 300ms ;
+    padding: 1vh;
+    font-size: 20px;
+    background: rgb(239, 239, 239);
+}
+
+#mates{
+    width: 80%;
+}
+
+#mates ul{
+    display: flex;
+    list-style-type: none;
+    gap: 4vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 0;
+}
+
+#mates ul li{
+    width: 20%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+#mates img{
+    width: 100%;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+#mates ul li a{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+legend{
+    color: #0000008C;
+    opacity: 0.55;
+}
+
+.groupmates li:hover {
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes scale-up-center {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+        color: blueviolet;     
+    }
+  }

@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    background: linear-gradient(0deg, rgba(72, 58, 238, 0.1), rgba(72, 58, 238, 0.1));
+    
+}
+
+html{
+    height: 100vh;
+
+}
+
+body{
+    display: grid;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    grid-template-rows: 80vh 20vh;
+    grid-template-areas: "main"
+    "footer";
+}
+
+
+.links{
+    display: flex;
+    list-style-type: none;
+    gap: 3%;
+}
+
+.copyright{
+    margin-left: auto;
+    align-self: center;
+    text-align: end;
+}
+
+main{
+    grid-area: main;
+    margin: auto;
+    /* transform: scale(200%); */
+    /* border: 10px solid black; */
+    height: 100%;
+    width: 100%;
+}
+
+
+.form{
+    margin-top: 20vh;
+    width: 100%;
+    height: 30%;
+}
+.form_login{
+    display: grid;
+    gap: 2vh;
+    width: 40%;
+    height: 70%;
+    margin: auto;
+}
+
+.form_login input, .form_login button, .form_login a{
+    justify-self: center;
+    height: 2em;
+}
+
+.logo_links{
+    display: grid;
+    grid-template-rows: auto auto;
+    align-self: center;
+}
+
+footer{
+    grid-area: footer;
+    height: 20%;
+    /* background-color: aqua; */
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    display: flex;
+    align-self: flex-end;
+}
+
+form img{
+    text-align: center;
+    justify-self: center;
+}
+
+input {
+    border: 1px solid black;
+    transition: all 300ms ;
+}
+
+    input[type="text"], input[type="password"] {
+        padding: 3px;
+        border: 0;
+        border-radius: 30px;
+        color: #8A3106;
+        background-color: whitesmoke;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    input::-webkit-input-placeholder {
+        color: #8A3106;
+        text-align: center;
+    }
+
+    input:hover::-webkit-input-placeholder, input:focus::-webkit-input-placeholder {
+        color: #8A3106;
+        transition: all 300ms ease;
+    }
+
+    input[type="text"]:hover, input[type="password"]:hover {
+        background-color: #FFCAB0;
+        color: #8A3106;
+    }
+
+    input[type="text"]:focus, input[type="password"]:focus {
+        background-color: #FFCAB0;
+        color: #8A3106;
+    }
+
+button[type="submit"] {
+    margin: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 3px;
+    border: 0;
+    background-color: #FFCAB0;
+    color: #8A3106;
+    width: 30%;
+}
+
+    button[type="submit"]:hover {
+        background-color: #8A3106;
+        color: whitesmoke;
+        cursor: pointer;
+    }
+
+        button[type="submit"]:active {
+            background-color: whitesmoke;
+            color: whitesmoke;
+        }
+
+form a:hover {
+    background-color: #FFCAB0;
+    color: #8A3106;
+    cursor: pointer;
+}
+
+form a {
+    color: #8A3106;
+    margin: 0;
+    text-decoration: unset;
+    border-radius: 7px;
+    transition: all 500ms;
+    padding:0;
+    padding-top: 1.6vh;
+}
+
+footer article img {
+    width: 6vh;
+    height: auto;
+    border-radius: 2vh;
+}
+#Logo-BerryShade{
+    width: 9vh;
+    opacity: 0.7;
+}
+
+footer{
+    text-decoration-style: none;
+    font-size: 14px;
+}
+
+#logo-site{
+    max-width: 20vh;
+    border-radius: 20%;
+}
+
+ 
+
+#tg, #vk{
+    position: relative;
+}
+
+
+
+#tg:hover, #vk:hover{
+    animation-name: icons;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; 
+    /* animation-iteration-count: 2; 
+    animation-timing-function: ease-in;*/
+}
+
+@keyframes icons{
+    0%{
+        /*background-color: rgb(119, 119, 255);*/
+        transform: scale(1);
+        top: 0px;
+    }
+    50%{
+        /*background-color: #73f7f7;*/
+        transform: scale(0.9);
+        top: 2px;
+        opacity: 0.5;
+    }
+    100%{
+        /*background-color: rgb(211, 253, 114);*/
+        transform: scale(1.2);
+        top: 1px;
+    }
+}
+
+
+#form{
+    animation-name: form;
+    animation-duration: 2s;
+    position: relative;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes form{
+    0%{
+        /*left:3em;*/
+        opacity: 0.4;
+    }
+    
+    50%{
+        /*left:2em;*/
+        /*transform: scale(1.3);*/
+        opacity: 0.7;
+    }
+    /*70% {
+        top: 0.1em;
+        opacity: 0.1;
+        transform: scale(0.7);
+    }*/
+    100% {
+        left: 0em;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#Logo-BerryShade{
+    position: relative;
+    animation-name: logo;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+@keyframes Logo-BerryShade {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(3);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#footer{
+    position: relative;
+    animation-name: footer;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+@keyframes footer {
+    0%{
+        opacity: 0.2;
+        bottom: 2em;
+    }
+    50%{
+        opacity: 0.7;
+        bottom: 1em;
+    }
+    100%{
+        opacity: 1;
+        bottom: 0em;
+    }
+} 
