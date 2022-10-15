@@ -6,7 +6,7 @@
 
 header{
     width: 100%;
-    height: 5vh;
+    /* height: 5vh; */
     left: 0px;
     background: #C0A2E1;
     top: 0px;
@@ -47,20 +47,16 @@ header{
     display: grid;
 }
 
-header button{
+header .container-menu{
     align-self: center;
     justify-self: flex-end;  
-    border: none;
-    margin-right: 10vh; 
-    background-color: white;
-    
+    z-index: 10;
 }
 header button img{
     width: 3vh;
     height: 3vh;
 }
 main{
-    height: 70vh;
     display: grid;
     grid-template-rows: 20% 80%;
 }
@@ -69,10 +65,11 @@ main #search{
     align-self: center;
     height: 20%;
     justify-self: center;
+    z-index: 1000;
 }
 
 main #search input{
-    width: 80vh;
+    width: 80vw;
     height: 2vh;
     border-radius: 10px;
     border: 1px solid lightgray;
@@ -84,9 +81,9 @@ main #search input{
 }
 
 main #cell-group{
+    margin-top: 2%;
     align-self: center;
     justify-self: center;
-    width: 90vh;
 }
 
 main ol {
@@ -94,10 +91,14 @@ main ol {
 }
 
 main #cell-group ol{
-    display: grid;
-    grid-template-areas: "first second third"
-    "fourth fifth sixth";
-    gap: 5vh;
+    display: flex;
+    /* grid-template-areas: "first second third"
+    "fourth fifth sixth"; */
+    flex-wrap: wrap;
+    gap: 10%;
+    /* justify-content: start;
+    align-items: flex-start; */
+    margin-left: 10%;
 }
 
 main ol li {
@@ -106,6 +107,7 @@ main ol li {
     "legend";
     width: 15vh;
     height: 25vh;
+    margin: 5%;
 }
 /* main ol li a{
     height: 15vh;
@@ -290,11 +292,11 @@ footer article img {
 
 
 #footer{
-    position: relative;
     animation-name: footer;
     animation-duration: 3s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
+    position: -webkit-sticky;
 }
 
 @keyframes footer {
@@ -311,3 +313,100 @@ footer article img {
         bottom: 0em;
     }
 } 
+
+@media (max-width:900px) {
+    main #cell-group{
+        height: 600px;
+        margin-left: 20px;
+    }
+    main #cell-group ol{
+        grid-template-areas:"first second"
+        "third fourth"
+        "fifth sixth";
+        margin-top: 25%;
+    }
+    main{
+    grid-template-rows: 10% 60%;
+    }
+    footer{
+        /* background-color: aqua; */
+        margin: 3%;
+        display: flex;
+        align-self: flex-end;
+        text-decoration-style: none;
+        font-size: 14px;
+        margin-top: 30%;
+    }
+}
+
+@media (max-width:600px) {
+    main #cell-group{
+        height: 600px;
+        margin-left: 20px;
+    }
+    main #cell-group ol{
+        grid-template-areas:"first "
+        "second"
+        "third" 
+        "fourth"
+        "fifth" 
+        "sixth";
+        margin-top: 25%;
+    }
+    footer{
+        /* background-color: aqua; */
+        margin: 3%;
+        display: flex;
+        align-self: flex-end;
+        text-decoration-style: none;
+        font-size: 14px;
+        margin-top: 300%;
+    }
+   
+}
+
+
+
+.container-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu {
+    position:relative;
+    background: #C0A2E1;
+    cursor: pointer;
+    border: none;
+    margin-right: 8vh;
+    align-self: center;
+}
+
+.menu {
+    position: absolute;
+    cursor: pointer;
+    list-style: none;
+    display: grid;
+    top: 7vh;
+    right: 2vh;
+    gap: 3vh;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    color: #C0A2E1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.menu li a{
+    text-decoration: none;
+}
+
+
+
+.menu li:hover{
+    border: 2px solid #C0A2E1;
+    background-color: yellowgreen;
+}
+
+.hide{
+    display: none;
+}

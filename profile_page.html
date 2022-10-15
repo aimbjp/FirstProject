@@ -1,9 +1,11 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="profile_page.css">
     <title>Профиль</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
     <header>
@@ -33,12 +35,12 @@
                     <form class="change_info_form">
                         <section class="label_input">
                             <label for="about">О себе</label>
-                            <input type="text" class="about" id="about" name="about">
+                            <textarea type="text" class="about" id="about" name="about"></textarea>
                         </section>
                         <div class="short_info">
                             <section>
                                 <label for="town">Город</label>
-                                <input type="text" name="town" id="town">
+                                <textarea type="text" name="town" id="town"></textarea>
                             </section>
                             <section>
                                 <label for="birthday">Дата рождения</label>
@@ -47,13 +49,15 @@
                         </div>
                         <section>
                             <label for="learning">Учеба</label>
-                            <input type="text" name="learning" id="learning" class="learning">
+                            <textarea type="text" name="learning" id="learning" class="learning"></textarea>
                         </section>
                         <section>
                             <label for="hobby">Хобби</label>
-                            <input type="hobby" name="hobby" id="hobby" class="hobby">
+                            <textarea type="text" name="hobby" id="hobby" class="hobby"></textarea>
                         </section>
-                        <button class="save" id="save">Сохранить изменения</button>
+                        <!--<button class="save" id="save">Сохранить изменения</button>
+                        &lt;!&ndash;<section id="save"></section>&ndash;&gt;-->
+                        <div id="save"></div>
                     </form>
                 </div>
             </div>
@@ -64,7 +68,7 @@
             <img src="pics/BerryShade-logos_black.png" alt="Logo-BerryShade" id="Logo-BerryShade">
             <h2 class="share_links">Расскажите о нас:</h2>
             <ul class="links" id="links">
-                <li><a href="#"> <img src="pics/icons8-телеграмма-app.svg" alt="tg" id="tg"></a></li>
+                <li><a href="#"> <img src="pics/icons8.svg" alt="tg" id="tg"></a></li>
                 <li><a href="#"> <img src="pics/github_git_icon_145985.svg" alt="vk" id="vk"></a></li>
             </ul>
         </article>
@@ -76,5 +80,8 @@
             </p>
         </div>
     </footer>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="profile_page.js"></script>
 </body>
 </html>

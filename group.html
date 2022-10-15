@@ -1,10 +1,13 @@
-<DOCTYPE html>
+<!DOCTYPE html>
     <html lang="ru">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="profile_page.css">
         <link rel="stylesheet" href="group.css">
         <title>Группа</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="group.js" defer></script>
+
     </head>
     <body>
         <header>
@@ -29,37 +32,37 @@
                     <section id="search">
                         <input type="text" placeholder="Поиск...">
                     </section>
-                    <section id="mates">
-                        <ul>
-                            <li>
+                    <section id="mates" data-carousel>
+                        <ul data-slides>
+                            <li class="slide" data-active>
                                 <a href="#"><img src="pics/1564314090_3.jpeg" alt="first"></a>
                                 <legend for="first">Firstname Lastname</legend>
                             </li>
-                            <li>
+                            <li class="slide" >
                                 <a href="#"><img src="pics/caed.jpeg" alt="second"></a>
                                 <legend for="second">Firstname Lastname</legend>
                             </li>
-                            <li>
+                            <li class="slide" >
                                 <a href="#"><img src="pics/carf.jpeg" alt="third"></a>
                                 <legend for="third">Firstname Lastname</legend>
                             </li>
-                            <li>
+                            <li class="slide">
                                 <a href="#"><img src="pics/catd.jpeg" alt="fourth"></a>
                                 <legend for="fourth">Firstname Lastname</legend>
                             </li>
-                            <li>
+                            <li class="slide">
                                 <a href="#"><img src="pics/cater.gif" alt="fifth"></a>
                                 <legend for="fifth">Firstname Lastname</legend>
                             </li>
-                            <li>
+                            <li class="slide">
                                 <a href="#"><img src="pics/des.jpeg" alt="sixth"></a>
                                 <legend for="sixth">Firstname Lastname</legend>
                             </li>
-                            <li>
+                            <li class="slide">
                                 <a href="#"><img src="pics/eeed.jpeg" alt="seventh"></a>
                                 <legend for="seventh">Firstname Lastname</legend>
                             </li>
-                            <li>
+                            <li class="slide">
                                 <a href="#"><img src="pics/gfa.jpeg" alt="eighth"></a>
                                 <legend for="eighth">Firstname Lastname</legend>
                             </li>
@@ -96,17 +99,18 @@
                                 <legend for="first">qq</legend>
                             </li> -->
                         </ul>
+                        <button id="prev" data-carousel-button="prev">&#8656</button>
+                        <button id="next" data-carousel-button="next">&#8658</button>
                     </section>
                 </div>
-                </div>
-        
+                
         </main>
         <footer>
             <article class="logo_links" id="logo_links">
                 <img src="pics/BerryShade-logos_black.png" alt="Logo-BerryShade" id="Logo-BerryShade">
                 <h2 class="share_links">Расскажите о нас:</h2>
                 <ul class="links" id="links">
-                    <li><a href="#"> <img src="pics/icons8-телеграмма-app.svg" alt="tg" id="tg"></a></li>
+                    <li><a href="#"> <img src="pics/icons8.svg" alt="tg" id="tg"></a></li>
                     <li><a href="#"> <img src="pics/github_git_icon_145985.svg" alt="vk" id="vk"></a></li>
                 </ul>
             </article>
@@ -118,5 +122,6 @@
                 </p>
             </div>
         </footer>
+
     </body>
     </html>

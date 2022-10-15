@@ -4,40 +4,90 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
     <title>Страница входа</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
     <main>
-        <!-- <div class="title_form" id="title_form">
-            <h1>Поделись своими достижениями</h1>
-        </div> -->
         <div class="form" id="form">
             <form class="form_login" id="form-login">
+                <!--<div class="title_form" id="root">
+                </div>
+                -->
                 <img src="pics/GP-logos.jpeg" alt="Logo-site" id="logo-site">
                 <input type="text" placeholder="Логин" required id="login" tabindex="1">
-                <input type="password" placeholder="Пароль" required id="password" tabindex="2">
+                <div>
+                    <input type="password" placeholder="Пароль" required id="password" tabindex="2" class="password">
+                    <p class="show-pass" id="show">show</p>
+                </div>
                 <button type="submit" name="login_button" value="send_data" id="ligon_button">Войти</button>
                 <a href="#" name="lost_password" class="underline_text" id="lost_password">Забыли пароль</a>
-                <a href="#" name="signin" class="signin_text" id="signin">Зарегистрироваться</a>
-                <a href="lobby.html" name="signins" class="signin_text" id="signin">ПОСЛЕ АВТОРИЗАЦИИ</a>
+                <a href="#" name="signin" class="signin_text" id="signup">Зарегистрироваться</a>
+                <a href="lobby.html" name="signins" class="signin_text" id="signins">ПОСЛЕ АВТОРИЗАЦИИ</a>
+            </form>
+            <form class="forget-password hide" id="forget-password">
+                <!--<div class="title_form" id="root">
+                </div>
+                -->
+                <p class="back"><a class="close" id="close">Вернуться</a></p>
+                <img src="pics/GP-logos.jpeg" alt="Logo-site" class="logo-site">
+                <input type="text" placeholder="email" required class="email" tabindex="1">
+                <p class="d">Enter an email, we will send you an instruction</p>
+                <button type="submit" name="login_button" value="send_data" id="forget_button">Отправить</button>
+
+            </form>
+            <form class="registration hide" id="registration">
+                <!--<div class="title_form" id="root">
+                </div>
+                --> 
+                <p class="back"><a class="closeReg" id="closeReg">Вернуться</a></p>
+                <img src="pics/GP-logos.jpeg" alt="Logo-site" class="logo-site">
+                <div class="form-control">
+                    <input type="text" placeholder="Email" required class="email" id="email" tabindex="1"> 
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+			        <small>Error message</small>  
+                </div>   
+                <div class="form-control">
+
+                <input type="text" placeholder="Никнейм" class="nick" tabindex="2">                
+                </div>
+                <div class="form-control">
+                    <input type="password" placeholder="Пароль" required id="password2" tabindex="3">
+                    <p class="show-pass" id="show2" ></p>
+        
+                </div>
+                <div class="form-control">
+                    <input type="password" placeholder="Пароль" required id="password3" tabindex="3">
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+			        <small>Error message</small>
+                </div>
+                <button type="submit" name="login_button" value="send_data" id="reg_button">Зарегистрироваться</button>
             </form>
         </div>
+        <script src="script.js"></script>
     </main>
     <footer id="footer">
-        <article class="logo_links" id="logo_links">
+        <section class="logo_links" id="logo_links">
             <img src="pics/BerryShade-logos_black.png" alt="Logo-BerryShade" id="Logo-BerryShade">
             <h2 class="share_links">Расскажите о нас:</h2>
             <ul class="links" id="links">
-                <li><a href="#"> <img src="pics/icons8-телеграмма-app.svg" alt="tg" id="tg"></a></li>
+                <li><a href="#"> <img src="pics/icons8.svg" alt="tg" id="tg"></a></li>
                 <li><a href="#"> <img src="pics/github_git_icon_145985.svg" alt="vk" id="vk"></a></li>
             </ul>
-        </article>
-        <div class="copyright" id="copyright" ß>
+        </section>
+        <section class="copyright" id="copyright">
             <p>
                 2022
                 <br>
                 Все права защищены
             </p>
-        </div>
+        </section>
     </footer>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="index.js"></script>
 </body>
 </html>

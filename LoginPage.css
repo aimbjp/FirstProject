@@ -3,15 +3,6 @@
     padding: 0;
 }
 
-:root{
-    
-}
-
-html{
-    height: 100vh;
-
-}
-
 body{
     display: grid;
     margin: 0;
