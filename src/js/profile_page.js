@@ -3,24 +3,23 @@ const e = React.createElement;
 class LikeButton extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { liked: false };
-
+        this.state = { saved: false };
     }
 
     render() {
-        if (this.state.liked) {
+        if (this.state.saved) {
 
             return (e(
                 'p',
-                { onClick : () => this.setState({ liked: false }) },
-                'Сохранилось (click)'
+                { onClick : setTimeout( () => this.setState({ saved: false }), 1000 ) },
+                'Сохранилось'
                 )
             );
         }
 
         return e(
             'button',
-            { onClick: () => this.setState({ liked: true }) },
+            { onClick:  () => this.setState({ saved: true })},
             'Сохранить'
         );
     }

@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../src/styles/index.css">
     <title>Страница входа</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,7 +14,7 @@
                 <!--<div class="title_form" id="root">
                 </div>
                 -->
-                <img src="pics/GP-logos.jpeg" alt="Logo-site" id="logo-site">
+                <img src="../pics/GP-logos.jpeg" alt="Logo-site" id="logo-site">
                 <input type="text" placeholder="Логин" required id="login" tabindex="1">
                 <div>
                     <input type="password" placeholder="Пароль" required id="password" tabindex="2" class="password">
@@ -23,14 +23,14 @@
                 <button type="submit" name="login_button" value="send_data" id="ligon_button">Войти</button>
                 <a href="#" name="lost_password" class="underline_text" id="lost_password">Забыли пароль</a>
                 <a href="#" name="signin" class="signin_text" id="signup">Зарегистрироваться</a>
-                <a href="lobby.html" name="signins" class="signin_text" id="signins">ПОСЛЕ АВТОРИЗАЦИИ</a>
+                <a href="../src/html/lobby.html" name="signins" class="signin_text" id="signins">ПОСЛЕ АВТОРИЗАЦИИ</a>
             </form>
             <form class="forget-password hide" id="forget-password">
                 <!--<div class="title_form" id="root">
                 </div>
                 -->
                 <p class="back"><a class="close" id="close">Вернуться</a></p>
-                <img src="pics/GP-logos.jpeg" alt="Logo-site" class="logo-site">
+                <img src="../pics/GP-logos.jpeg" alt="Logo-site" class="logo-site">
                 <input type="text" placeholder="email" required class="email" tabindex="1">
                 <p class="d">Enter an email, we will send you an instruction</p>
                 <button type="submit" name="login_button" value="send_data" id="forget_button">Отправить</button>
@@ -41,7 +41,7 @@
                 </div>
                 --> 
                 <p class="back"><a class="closeReg" id="closeReg">Вернуться</a></p>
-                <img src="pics/GP-logos.jpeg" alt="Logo-site" class="logo-site">
+                <img src="../pics/GP-logos.jpeg" alt="Logo-site" class="logo-site">
                 <div class="form-control">
                     <input type="text" placeholder="Email" required class="email" id="email" tabindex="1"> 
                     <i class="fas fa-check-circle"></i>
@@ -66,15 +66,15 @@
                 <button type="submit" name="login_button" value="send_data" id="reg_button">Зарегистрироваться</button>
             </form>
         </div>
-        <script src="script.js"></script>
+        <script src="js/script.js" defer></script>
     </main>
     <footer id="footer">
         <section class="logo_links" id="logo_links">
-            <img src="pics/BerryShade-logos_black.png" alt="Logo-BerryShade" id="Logo-BerryShade">
+            <img src="../pics/BerryShade-logos_black.png" alt="Logo-BerryShade" id="Logo-BerryShade">
             <h2 class="share_links">Расскажите о нас:</h2>
             <ul class="links" id="links">
-                <li><a href="#"> <img src="pics/icons8.svg" alt="tg" id="tg"></a></li>
-                <li><a href="#"> <img src="pics/github_git_icon_145985.svg" alt="vk" id="vk"></a></li>
+                <li><a href="#"> <img src="../pics/icons8.svg" alt="tg" id="tg"></a></li>
+                <li><a href="#"> <img src="../pics/github_git_icon_145985.svg" alt="vk" id="vk"></a></li>
             </ul>
         </section>
         <section class="copyright" id="copyright">
@@ -88,6 +88,6 @@
 
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="index.js"></script>
+    <script src="js/index.js" defer></script>
 </body>
 </html>

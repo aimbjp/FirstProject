@@ -13,7 +13,6 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
-    grid-template-rows: 80vh 20vh;
     grid-template-areas: "main"
     "footer";
 }
@@ -93,7 +92,7 @@ input {
         border-radius: 30px;
         color: #8A3106;
         background-color: whitesmoke;
-        width: 60%;
+        width: 25vw;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
@@ -291,7 +290,6 @@ footer{
 } 
 
 form div {
-    width: 100%;
     display: flex;
 }
 
@@ -299,7 +297,7 @@ form div p {
     left: 59%;
     position: absolute;
     cursor: pointer;
-    top: 118%;
+    top: 116%;
     opacity: 0.5;
     color: #8A3106;
 }
@@ -403,4 +401,31 @@ form .back a:hover {
 .form-control.error small {
 	visibility: visible;
     display: block;
+}
+
+
+@media  (max-width: 600px) {
+    input[type="text"], input[type="password"] {
+        padding: 3px;
+        border: 0;
+        border-radius: 30px;
+        color: #8A3106;
+        background-color: whitesmoke;
+        width: 50vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    form div {
+        display: flex;
+    }
+    
+    form div p {
+        left: 70%;
+        position: absolute;
+        cursor: pointer;
+        top: 118%;
+        opacity: 0.5;
+        color: #8A3106;
+    }
 }

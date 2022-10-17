@@ -56,12 +56,13 @@ header button img{
     width: 3vh;
     height: 3vh;
 }
+
 main{
     display: grid;
-    grid-template-rows: 20% 80%;
 }
 
 main #search{
+    padding: 3vw;
     align-self: center;
     height: 20%;
     justify-self: center;
@@ -69,7 +70,7 @@ main #search{
 }
 
 main #search input{
-    width: 80vw;
+    width: 60vw;
     height: 2vh;
     border-radius: 10px;
     border: 1px solid lightgray;
@@ -77,13 +78,11 @@ main #search input{
     padding: 1vh;
     font-size: 20px;
     background: rgb(239, 239, 239);
-
 }
 
 main #cell-group{
     margin-top: 2%;
-    align-self: center;
-    justify-self: center;
+    width: 100%;
 }
 
 main ol {
@@ -105,8 +104,8 @@ main ol li {
     display: grid;
     grid-template-areas: "img"
     "legend";
-    width: 15vh;
-    height: 25vh;
+    max-width: 15vh;
+    max-height: 25vh;
     margin: 5%;
 }
 /* main ol li a{
@@ -204,7 +203,7 @@ footer{
     align-self: flex-end;
     text-decoration-style: none;
     font-size: 14px;
-    margin-top: 0%;
+    margin-top: 10%;
 }
 footer article img {
     width: 6vh;
@@ -314,7 +313,7 @@ footer article img {
     }
 } 
 
-@media (max-width:900px) {
+/* @media (max-width:900px) {
     main #cell-group{
         height: 600px;
         margin-left: 20px;
@@ -329,7 +328,7 @@ footer article img {
     grid-template-rows: 10% 60%;
     }
     footer{
-        /* background-color: aqua; */
+        /* background-color: aqua; 
         margin: 3%;
         display: flex;
         align-self: flex-end;
@@ -337,31 +336,17 @@ footer article img {
         font-size: 14px;
         margin-top: 30%;
     }
-}
+} */
 
 @media (max-width:600px) {
-    main #cell-group{
-        height: 600px;
-        margin-left: 20px;
-    }
+    
     main #cell-group ol{
-        grid-template-areas:"first "
-        "second"
-        "third" 
-        "fourth"
-        "fifth" 
-        "sixth";
-        margin-top: 25%;
+        flex-direction: column;
     }
     footer{
-        /* background-color: aqua; */
-        margin: 3%;
-        display: flex;
-        align-self: flex-end;
-        text-decoration-style: none;
-        font-size: 14px;
-        margin-top: 300%;
-    }
+        /*background-color: aqua;   */
+        margin-top: 60%;
+    } 
    
 }
 
@@ -409,4 +394,21 @@ footer article img {
 
 .hide{
     display: none;
+}
+
+@media (max-width: 600px) {
+    main #cell-group{
+        align-items: center;
+        justify-self: center;
+    }    
+    main #cell-group ol{
+        margin: 0;
+        align-items: center;
+        justify-self: center;
+    } 
+    main #cell-group ol li{
+        margin-left: -10%;
+        align-items: center;
+        justify-self: center;
+    } 
 }

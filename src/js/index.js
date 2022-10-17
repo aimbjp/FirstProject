@@ -1,21 +1,4 @@
 'use strict';
-/*import './react.css';*/
-/*
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    React.createElement(
-        "h1",
-        {children: 'Hello!'},
-    )
-);*/
-
-
-
-
-
-
-
 // show password function
 
 const password = document.querySelector('#password');

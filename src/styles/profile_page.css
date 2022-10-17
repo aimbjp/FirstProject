@@ -22,6 +22,7 @@ body{
     border-bottom: 2px solid #a400fd;
     color: #a400fd;
 }
+
 .link_avatar:hover{
     color: #a400fd;
 }
@@ -86,7 +87,7 @@ main .settings .text_information .change_info_form{
 
 main .settings .text_information{
     width: 100%;
-    margin-bottom: 20vh;
+    margin-bottom: 23vh;
 }
 
 main .settings .text_information .change_info_form label{
@@ -121,14 +122,7 @@ main .settings .photo{
     width: 300px;
 }
 
-@media (max-width: 767px) {
-    #upload_avatar{
-        width: 100px;
-    }
-    main {
-        flex-direction: column;
-    }
-}
+
 
 .photo{
     /* margin-top: -220px; */
@@ -140,7 +134,7 @@ main .settings .photo{
 }
 
 
-
+/* footer-part */
 
 footer{
     /* background-color: aqua; */
@@ -366,4 +360,42 @@ div #save:hover p{
 
 textarea::-webkit-scrollbar {
     width: 0;
+}
+
+@media (max-width: 767px) {
+    #upload_avatar{
+        width: 200px;
+    }
+    main {
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+    margin-top: 10vh;
+
+        padding: 0;
+        justify-items: center;
+        align-items: center;
+    }
+    main ul {
+        align-items: center;
+        justify-items: center;
+    }
+    .avat{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+    main .menu{
+        width: 100%;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    main .settings{
+        width: 100%;
+        margin-left: 0;
+    }
+    footer {
+        margin-top: 30%;
+    }
 }
