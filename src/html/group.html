@@ -7,6 +7,7 @@
         <title>Группа</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../js/group.js" defer></script>
+        <script src="../js/groupPopUp.js" defer></script>
     </head>
     <body>
         <header>
@@ -26,7 +27,7 @@
                 </div>
                 <div class="groupmates">
                     <section id="group_name">
-                        <h1>Спортсмены</h1>
+                        <h1 id="name_group">Title</h1>
                     </section>
                     <section id="search">
                         <input type="text" placeholder="Поиск...">
@@ -37,32 +38,32 @@
                                 <a href="#"><img src="../../pics/1564314090_3.jpeg" alt="first"></a>
                                 <legend for="first">Firstname Lastname</legend>
                             </li>
-                            <li class="slide" >
-                                <a href="#"><img src="../../pics/caed.jpeg" alt="second"></a>
+                            <li class="slide">
+                                <a href="#"> <img src="../../pics/caed.jpeg" class="linkedTo"  alt="second"></a>
                                 <legend for="second">Firstname Lastname</legend>
                             </li>
                             <li class="slide" >
-                                <a href="#"><img src="../../pics/carf.jpeg" alt="third"></a>
+                                <a href="#"> <img src="../../pics/carf.jpeg" class="linkedTo"  alt="third"></a>
                                 <legend for="third">Firstname Lastname</legend>
                             </li>
                             <li class="slide">
-                                <a href="#"><img src="../../pics/catd.jpeg" alt="fourth"></a>
+                                <a href="#"><img src="../../pics/catd.jpeg" class="linkedTo"  alt="fourth"></a>
                                 <legend for="fourth">Firstname Lastname</legend>
                             </li>
                             <li class="slide">
-                                <a href="#"><img src="../../pics/cater.gif" alt="fifth"></a>
+                                <a href="#"><img src="../../pics/cater.gif" class="linkedTo"  alt="fifth"></a>
                                 <legend for="fifth">Firstname Lastname</legend>
                             </li>
                             <li class="slide">
-                                <a href="#"><img src="../../pics/des.jpeg" alt="sixth"></a>
+                                <a href="#"><img src="../../pics/des.jpeg"  class="linkedTo" alt="sixth"></a>
                                 <legend for="sixth">Firstname Lastname</legend>
                             </li>
                             <li class="slide">
-                                <a href="#"><img src="../../pics/eeed.jpeg" alt="seventh"></a>
+                                <a href="#"><img src="../../pics/eeed.jpeg" class="linkedTo"  alt="seventh"></a>
                                 <legend for="seventh">Firstname Lastname</legend>
                             </li>
                             <li class="slide">
-                                <a href="#"><img src="../../pics/gfa.jpeg" alt="eighth"></a>
+                                <a href="#"><img src="../../pics/gfa.jpeg"  class="linkedTo" alt="eighth"></a>
                                 <legend for="eighth">Firstname Lastname</legend>
                             </li>
                         </ul>
@@ -71,6 +72,53 @@
                             <button id="next" data-carousel-button="next">&#8658</button>
                         </div>
                     </section>
+                </div>
+                <div class="pop-up hide">
+                    <div class="content-pop-up">
+                        <section class="head-pop">
+                            <h2 class="name">Lastname Firstname</h2>
+                            <p class="exit-x">x</p>
+                        </section>
+                        <section class="status no-content">
+                            <img src="../../pics/gfa.jpeg" alt="avatar" class="av-pop">
+                            <div class="stat-block">
+                                <h2>Status:</h2>
+                                <p class="status-txt">Just work, honey!</p>
+                                <div class="like"></div>
+                            </div>
+                            <button class=" expand button fill" cursor="link">
+                                <span>More</span>
+                            </button>
+                        </section>
+                        <section class="other-inf hide">
+                            <ol class="list-of-inf">
+                                <li class="inf-block">
+                                    <h2 class="inf-name">
+                                        About
+                                    </h2>
+                                    <p class="inf-txt">
+                                        Senior Web Developer 
+                                    </p>
+                                </li>
+                                <li class="inf-block">
+                                    <h2 class="inf-name ">
+                                        Town
+                                    </h2>
+                                    <p class="inf-txt town">
+                                        Ekat
+                                    </p>
+                                </li>
+                                <li class="inf-block">
+                                    <h2 class="inf-name">
+                                        Hobbies
+                                    </h2>
+                                    <p class="inf-txt">
+                                        PC, programming, languages, cars
+                                    </p>
+                                </li>
+                            </ol>
+                        </section>
+                    </div>
                 </div>
         </main>
         <footer>
@@ -91,4 +139,7 @@
             </div>
         </footer>
     </body>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="../js/SomeReact/LikeBtnGroup.js" defer></script>
 </html>

@@ -66,7 +66,6 @@ main #search{
     align-self: center;
     height: 20%;
     justify-self: center;
-    z-index: 1000;
 }
 
 main #search input{
@@ -295,7 +294,6 @@ footer article img {
     animation-duration: 3s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
-    position: -webkit-sticky;
 }
 
 @keyframes footer {
@@ -379,6 +377,9 @@ footer article img {
     align-self: center;
     color: #C0A2E1;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #6dca4298;
+        border-radius: 20px;
+        padding: 2%;
 }
 
 .menu li a{
@@ -412,6 +413,11 @@ footer article img {
         align-items: center;
         justify-self: center;
     } 
+    .menu {
+        background: #6dca4298;
+        border-radius: 20px;
+        padding: 5%;
+    }
 }
 
 /* menu */
