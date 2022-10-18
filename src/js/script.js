@@ -1,3 +1,5 @@
+'use strict';
+
 // show password function
 
 const password = document.querySelector("#password");
@@ -31,6 +33,7 @@ const passwordLost = document.querySelector("#lost_password");
 const registrationLink = document.querySelector("#signup");
 const closeReg = document.querySelector("#closeReg");
 const closePassword = document.querySelector("#close");
+const emailLost = document.getElementById('emailLost');
 
 registrationLink.addEventListener("click", () => {
     loginSec.style.display = "none";
@@ -84,7 +87,8 @@ const email = document.getElementById('email');
 registrationSec.addEventListener('submit', e => {
     e.preventDefault();
     if (checkInputs()) {
-        alert('Регистрация прошла успешно');
+        event.preventDefault();
+        window.location.reload();
     }
 
 });
@@ -134,5 +138,39 @@ function setSuccessFor(input) {
 }
 
 function isEmail(email) {
-	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
+
+// Recover password from email address
+
+passwordSec.addEventListener('submit', () => {
+    if (isEmail(emailLost.value.trim())){
+        event.preventDefault();
+        messageIn(passwordSec, 'Send');
+        setTimeout(() => {window.location.href = 'index.html'}, 2000);
+    } else {
+        event.preventDefault();
+        messageIn(passwordSec, 'Wrong email')
+    }
+});
+
+function messageIn(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	small.innerText = message;
+}
+
+// logining
+
+const loginInp = document.getElementById('login');
+const passInp = document.getElementById('password');
+
+loginSec.addEventListener('submit', () => {
+    if (loginInp.value === 'a' && passInp.value === 'a') {
+        event.preventDefault();
+        window.location.pathname = '/src/html/lobby.html';
+    } else {
+        event.preventDefault();
+        alert('username: a \npassword: a');
+    }
+});

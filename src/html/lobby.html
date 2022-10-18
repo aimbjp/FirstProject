@@ -5,12 +5,18 @@
         <link rel="stylesheet" href="../styles/lobby.css">
         <title>Лобби</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
     </head>
     
     <body>
         <header>
             <div class="container-menu">
-                <button contextmenu="menu" id="menu"><img src="../../pics/threebars_106419.svg" alt="Menu"></button>
+                <div class="icon menu-icon" id="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                <!-- <button contextmenu="menu" id="menu"><img src="../../pics/threebars_106419.svg" alt="Menu"></button> -->
                 <!-- <a href="index.html" name="signins" class="signin_text" id="signin">НА ЛОГИН</a> -->
                 <ul class="menu hide" id="listUl">
                     <li><a href="#">Вопросы и ответы</a></li>
@@ -22,22 +28,24 @@
         </header>
         <main>
             <section id="search"> <input type="text" placeholder="Поиск..." id="searchBox" data-search></section>
-            <section id="cell-group">
-                <ol class="cell" id="cell-group1">
-                    <li id="first"><legend for="first">Спортсмены</legend><a href="../html/group.html"></a></li>
+            <section id="cell_group">
+                <ol class="cell" id="cell_group1">
+                    <!-- <li id="first"><legend for="first">Спортсмены</legend><a href="../html/group.html"></a></li>
                     <li id="second"><legend for="second">Одногруппники</legend><a href="../html/group.html"></a></li>
                     <li id="third"><legend for="third">Мой любимый класс</legend><a href="../html/group.html"></a></li>
                     <li id="fourth"><legend for="fourth">Коллеги</legend><a href="../html/group.html"></a></li>
-                    <li id="fifth"><legend for="fifth">Anime squad228</legend><a href="../html/group.html"></a></li>
-                    <li id="sixth"><legend for="sixth"></legend><a href="#"></a></li>
+                    <li id="fifth"><legend for="fifth">Aplle's fan</legend><a href="../html/group.html"></a></li> -->
+                    <!-- <li id="sixth"><legend for="sixth"></legend><a href="#"></a></li> -->
                     <!-- <li id=""><legend for="fifth">Anime squad228</legend><a href="group.html"></a></li>
                     <li id=""><legend for="fifth">Anime squad228</legend><a href="group.html"></a></li>
                     <li id=""><legend for="fifth">Anime squad228</legend><a href="group.html"></a></li>
                     <li id=""><legend for="fifth">Anime squad228</legend><a href="group.html"></a></li>
                     <li id=""><legend for="fifth">Anime squad228</legend><a href="group.html"></a></li> -->
-                    
                 </ol>
             </section>
+            <div id="root">
+
+            </div>
         <script src="../js/lobbyscript.js"></script>
 
         </main>
@@ -59,5 +67,8 @@
             </div>
     </footer> 
     </body>
-    
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script type="module" src="../js/SomeReact/indLobbyR.js"></script>
 </html>

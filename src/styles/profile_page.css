@@ -27,6 +27,12 @@ body{
     color: #a400fd;
 }
 
+.active {
+    padding: 1vh;
+    border-bottom: 2px solid #a400fd;
+    color: #a400fd;
+}
+
 header{
     position: absolute;
     width: 100%;

@@ -297,7 +297,7 @@ form div p {
     left: 59%;
     position: absolute;
     cursor: pointer;
-    top: 116%;
+    top: 128%;
     opacity: 0.5;
     color: #8A3106;
 }
@@ -372,21 +372,29 @@ form .back a:hover {
     display: grid;
 }
 
+.fas {
+    display: none;
+    width: 10px;
+	height: 10px;
+    border-radius: 100%;
+    top: -110%;
+    right: -78%;
+}
+
 .form-control i {
-	visibility: hidden;
+    display: none;
 	position: relative;
-	top: 40px;
-	right: 10px;
 }
 
 .form-control.success i.fa-check-circle {
-	color: #2ecc71;
-	visibility: visible;
+	background-color: #2ecc71;
+    top: -100% !important;
+    display: block;
 }
 
 .form-control.error i.fa-exclamation-circle {
-	color: #e74c3c;
-	visibility: visible;
+	background-color: #e74c3c;
+    display: block;
 }
 
 .form-control small {
@@ -424,8 +432,18 @@ form .back a:hover {
         left: 70%;
         position: absolute;
         cursor: pointer;
-        top: 118%;
+        top: 130%;
         opacity: 0.5;
         color: #8A3106;
+    }
+    main {
+        margin-left: -5%;
+    }
+}
+
+@media (min-height: 1000px) {
+    form div p {
+        top: 135%;
+        left: 60%;
     }
 }

@@ -25,3 +25,13 @@ menu.addEventListener('click', () => {
         menuList.classList.remove('hide');
     }
 });
+
+
+// menu button click
+
+const icons = document.querySelectorAll('.icon');
+icons.forEach (icon => {  
+  icon.addEventListener('click', (event) => {
+    icon.classList.toggle("open");
+  });
+});

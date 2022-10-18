@@ -20,10 +20,10 @@
                     <input type="password" placeholder="Пароль" required id="password" tabindex="2" class="password">
                     <p class="show-pass" id="show">show</p>
                 </div>
-                <button type="submit" name="login_button" value="send_data" id="ligon_button">Войти</button>
+                <button type="submit" name="login_button" value="send_data" id="login_button">Войти</button>
                 <a href="#" name="lost_password" class="underline_text" id="lost_password">Забыли пароль</a>
                 <a href="#" name="signin" class="signin_text" id="signup">Зарегистрироваться</a>
-                <a href="../src/html/lobby.html" name="signins" class="signin_text" id="signins">ПОСЛЕ АВТОРИЗАЦИИ</a>
+                <!-- <a href="../src/html/lobby.html" name="signins" class="signin_text" id="signins">ПОСЛЕ АВТОРИЗАЦИИ</a> -->
             </form>
             <form class="forget-password hide" id="forget-password">
                 <!--<div class="title_form" id="root">
@@ -31,8 +31,8 @@
                 -->
                 <p class="back"><a class="close" id="close">Вернуться</a></p>
                 <img src="../pics/GP-logos.jpeg" alt="Logo-site" class="logo-site">
-                <input type="text" placeholder="email" required class="email" tabindex="1">
-                <p class="d">Enter an email, we will send you an instruction</p>
+                <input type="text" placeholder="email" required class="email" tabindex="1" id="emailLost">
+                <small class="d" style="font-size: 1em;">Enter an email, we will send you an instruction</small>
                 <button type="submit" name="login_button" value="send_data" id="forget_button">Отправить</button>
 
             </form>
