@@ -82,6 +82,7 @@ main #search input{
 main #cell_group{
     margin-top: 2%;
     width: 100%;
+    margin-left: 3%;
 }
 
 main ol {

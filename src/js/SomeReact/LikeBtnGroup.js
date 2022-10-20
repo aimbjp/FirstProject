@@ -12,16 +12,31 @@ class LikeButton extends React.Component {
     render() {
         if (this.state.saved) {
             return (e(
-                'p',
-                { onClick : () => this.setState({ saved: false }) },
-                'Лайнуто'
+                'span',
+                { 
+                    onClick : () => this.setState({ saved: false }),
+                    style: {
+                        cursor: 'pointer',
+                        fontSize: '30px',
+                        textAlign: 'end',
+                        color: 'red'
+                    }
+                },
+                '\u2665'
                 )
             );
         }
         return e(
-            'p',
-            { onClick:  () => this.setState({ saved: true })},
-            'Лайк'
+            'span',
+            { 
+                onClick:  () => this.setState({ saved: true }),
+                style: {
+                    cursor: 'pointer',
+                    fontSize: '25px',
+                    color: 'white'
+                }
+            },
+            '\u2661'
         );
     }
 }

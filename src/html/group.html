@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>
-            
+            <canvas class="hide" id="canvas"></canvas>
         </header>
         <main>
                 <div class="menu">
@@ -29,42 +29,42 @@
                     <section id="group_name">
                         <h1 id="name_group">Title</h1>
                     </section>
-                    <section id="search">
+                    <!-- <section id="search">
                         <input type="text" placeholder="Поиск...">
-                    </section>
+                    </section> -->
                     <section id="mates" data-carousel>
                         <ul data-slides>
                             <li class="slide" data-active>
-                                <a href="#"><img src="../../pics/1564314090_3.jpeg" alt="first"></a>
-                                <legend for="first">Firstname Lastname</legend>
+                                <a href="#" ><img src="../../pics/1564314090_3.jpeg" class="linkedTo" alt="first"></a>
+                                <legend for="first" class="legendFor" id="../../pics/1564314090_3.jpeg">Legend Player</legend>
                             </li>
                             <li class="slide">
                                 <a href="#"> <img src="../../pics/caed.jpeg" class="linkedTo"  alt="second"></a>
-                                <legend for="second">Firstname Lastname</legend>
+                                <legend for="second" class="legendFor" id="../../pics/caed.jpeg">Hard Card</legend>
                             </li>
                             <li class="slide" >
                                 <a href="#"> <img src="../../pics/carf.jpeg" class="linkedTo"  alt="third"></a>
-                                <legend for="third">Firstname Lastname</legend>
+                                <legend for="third" class="legendFor" id="../../pics/carf.jpeg">Heralt Ron</legend>
                             </li>
                             <li class="slide">
                                 <a href="#"><img src="../../pics/catd.jpeg" class="linkedTo"  alt="fourth"></a>
-                                <legend for="fourth">Firstname Lastname</legend>
+                                <legend for="fourth" class="legendFor" id="../../pics/catd.jpeg">Muss Hunt</legend>
                             </li>
                             <li class="slide">
                                 <a href="#"><img src="../../pics/cater.gif" class="linkedTo"  alt="fifth"></a>
-                                <legend for="fifth">Firstname Lastname</legend>
+                                <legend for="fifth" class="legendFor" id="../../pics/cater.gif">Hover Board</legend>
                             </li>
                             <li class="slide">
                                 <a href="#"><img src="../../pics/des.jpeg"  class="linkedTo" alt="sixth"></a>
-                                <legend for="sixth">Firstname Lastname</legend>
+                                <legend for="sixth" class="legendFor" id="../../pics/des.jpeg">Real Name</legend>
                             </li>
                             <li class="slide">
                                 <a href="#"><img src="../../pics/eeed.jpeg" class="linkedTo"  alt="seventh"></a>
-                                <legend for="seventh">Firstname Lastname</legend>
+                                <legend for="seventh" class="legendFor" id="../../pics/eeed.jpeg">Box Show</legend>
                             </li>
                             <li class="slide">
                                 <a href="#"><img src="../../pics/gfa.jpeg"  class="linkedTo" alt="eighth"></a>
-                                <legend for="eighth">Firstname Lastname</legend>
+                                <legend for="eighth" class="legendFor" id="../../pics/gfa.jpeg">Mc Dac</legend>
                             </li>
                         </ul>
                         <div class="btns">
@@ -80,7 +80,9 @@
                             <p class="exit-x">x</p>
                         </section>
                         <section class="status no-content">
-                            <img src="../../pics/gfa.jpeg" alt="avatar" class="av-pop">
+                            <div>
+                                <img src="../../pics/gfa.jpeg" alt="avatar" class="av-pop">
+                            </div>
                             <div class="stat-block">
                                 <h2>Status:</h2>
                                 <p class="status-txt">Just work, honey!</p>

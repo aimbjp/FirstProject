@@ -1,11 +1,11 @@
 // search groups
-const list = document.querySelectorAll('.cell li');
 const search = document.querySelector('[data-search]');
 
 
 search.addEventListener("input", e => {
     const value = e.target.value.toLowerCase();
     console.log(value);
+    let list = document.querySelectorAll('.cell li');
     list.forEach(item => {
         const isVissible = item.innerHTML.toLowerCase().includes(value);
         item.classList.toggle('hide', !isVissible);

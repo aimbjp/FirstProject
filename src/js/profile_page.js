@@ -1,6 +1,6 @@
 const e = React.createElement;
 
-class SaveBtn extends React.Component {
+class LikeButton extends React.Component {
     constructor(props) {
         super(props);
         this.state = { saved: false };
@@ -28,7 +28,7 @@ class SaveBtn extends React.Component {
 const domContainer = document.querySelector(
     '#save'
 )
-ReactDOM.render(e(SaveBtn), domContainer)
+ReactDOM.render(e(LikeButton), domContainer)
 
 
 

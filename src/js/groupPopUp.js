@@ -1,9 +1,21 @@
-const linksTo = document.querySelectorAll('.slide');
+const linksTo = document.querySelectorAll('.linkedTo');
 const popUp = document.querySelector('.pop-up');
+let imgPop = document.querySelector('.av-pop');
+const legendFor = document.querySelectorAll('.legendFor');
+const canvasE = document.querySelector('#canvas');
 
 linksTo.forEach(e => {
-    e.addEventListener('click', () => {
-        popUp.classList.remove('hide');
+    e.addEventListener('click', () => { 
+      popUp.classList.remove('hide');
+      canvasE.classList.remove('hide');
+      let imgRef = e.getAttribute('src');
+        imgPop.setAttribute('src', imgRef);
+        legendFor.forEach(element => {
+          if (element.id === imgRef) {
+          let nameP = document.querySelector('.name');
+            nameP.innerHTML =  element.innerHTML;
+          }
+        });
     });
 });
 
@@ -11,6 +23,7 @@ const exit = document.querySelector('.exit-x');
 
 exit.addEventListener('click', () => {
     popUp.classList.add('hide');
+    canvasE.classList.add('hide');
 });
 
 const expand = document.querySelector('.expand');
@@ -40,6 +53,8 @@ expand.addEventListener('mouseleave', function() {
 
 window.onclick = function(e) {
     if (e.target == popUp) {
+    canvasE.classList.add('hide');
+
       popUp.classList.add('hide');
     }
   }
