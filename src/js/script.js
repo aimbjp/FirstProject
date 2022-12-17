@@ -168,7 +168,7 @@ const passInp = document.getElementById('password');
 loginSec.addEventListener('submit', () => {
     if (loginInp.value === 'a' && passInp.value === 'a') {
         event.preventDefault();
-        window.location.pathname = '/src/html/lobby.html';
+        window.location.pathname = 'FirstName/src/html/lobby.html';
     } else {
         event.preventDefault();
         alert('username: a \npassword: a');
